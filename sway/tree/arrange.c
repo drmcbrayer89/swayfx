@@ -11,10 +11,21 @@
 #include "sway/tree/view.h"
 #include "list.h"
 #include "log.h"
+#include "sway/config.h"
 
 static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 	if (!children->length) {
 		return;
+	}
+
+	if (children->length == 2) {
+		struct sway_container *primary = children->items[0];
+		struct sway_container *secondary = children->items[1];
+		
+		if(primary->width_fraction <= 0 || secondary->width_fraction <= 0) {
+			primary->width_fraction = 0.67;
+			secondary->width_fraction = 0.33;
+		}
 	}
 
 	// Count the number of new windows we are resizing, and how much space
@@ -45,6 +56,7 @@ static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 		}
 		total_width_fraction += child->width_fraction;
 	}
+
 	// Normalize width fractions so the sum is 1.0
 	for (int i = 0; i < children->length; ++i) {
 		struct sway_container *child = children->items[i];

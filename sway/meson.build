@@ -143,6 +143,7 @@ sway_sources = files(
 	'commands/titlebar_border_thickness.c',
 	'commands/titlebar_padding.c',
 	'commands/titlebar_separator.c',
+	'commands/ultrawide.c',
 	'commands/unmark.c',
 	'commands/urgent.c',
 	'commands/workspace.c',
