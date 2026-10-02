@@ -14,8 +14,6 @@
 #include "stringop.h"
 #include "log.h"
 
-struct cmd_results *cmd_ultrawide_mode (int argc, char **argv);
-
 // Returns error object, or NULL if check succeeds.
 struct cmd_results *checkarg(int argc, const char *name, enum expected_args type, int val) {
 	const char *error_name = NULL;
@@ -117,6 +115,7 @@ static const struct cmd_handler handlers[] = {
 	{ "titlebar_padding", cmd_titlebar_padding },
 	{ "titlebar_separator", cmd_titlebar_separator },
 	{ "ultrawide_mode", cmd_ultrawide_mode },
+	{ "ultrawide_split_percent", cmd_ultrawide_split_percent },
 	{ "unbindcode", cmd_unbindcode },
 	{ "unbindgesture", cmd_unbindgesture },
 	{ "unbindswitch", cmd_unbindswitch },
