@@ -28,8 +28,8 @@ static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 		
 			switch (children->length) {
 			case 2:
-				primary->width_fraction   = config->ultrawide_split_percent;
-				secondary->width_fraction = 1.0 - config->ultrawide_split_percent;
+				primary->width_fraction   = config->ultrawide_split_fraction;
+				secondary->width_fraction = 1.0 - config->ultrawide_split_fraction;
 				break;
 			case 3:
 				primary->width_fraction   = 0.5;

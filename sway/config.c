@@ -319,7 +319,7 @@ static void config_defaults(struct sway_config *config) {
 	
 	// ultrawide mode
 	config->ultrawide_mode = false;
-	config->ultrawide_split_percent = 0.67;
+	config->ultrawide_split_fraction = 0.67;
 
 	// border colors
 	color_to_rgba(config->border_colors.focused.border, 0x4C7899FF);

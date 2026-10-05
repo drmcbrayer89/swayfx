@@ -115,7 +115,7 @@ static const struct cmd_handler handlers[] = {
 	{ "titlebar_padding", cmd_titlebar_padding },
 	{ "titlebar_separator", cmd_titlebar_separator },
 	{ "ultrawide_mode", cmd_ultrawide_mode },
-	{ "ultrawide_split_percent", cmd_ultrawide_split_percent },
+	{ "ultrawide_split_fraction", cmd_ultrawide_split_fraction },
 	{ "unbindcode", cmd_unbindcode },
 	{ "unbindgesture", cmd_unbindgesture },
 	{ "unbindswitch", cmd_unbindswitch },
