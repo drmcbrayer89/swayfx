@@ -620,7 +620,7 @@ struct sway_config {
 
 	// ultrawide mode 
 	bool ultrawide_mode;
-	float ultrawide_split_percent;
+	float ultrawide_split_fraction;
 	
 	// Context for command handlers
 	struct {
