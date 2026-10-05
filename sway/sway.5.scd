@@ -1018,7 +1018,7 @@ The default colors are:
 
 *ultrawide_split_fraction* <fraction>
 	Sets the width_fraction of the primary window to _fraction_. Valid values are
-	 0 < _fraction_ < 1.
+	0 < _fraction_ < 1.
 
 *unbindswitch* <switch>:<state>
 	Removes a binding for when <switch> changes to <state>.
