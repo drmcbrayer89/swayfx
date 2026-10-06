@@ -31,7 +31,8 @@ static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 				if (first->width_fraction <= 0 || second->width_fraction <= 0) {
 					first->width_fraction = primary_fraction;
 					second->width_fraction = secondary_fraction;
-				} else if (first->width_fraction - secondary_fraction == 0 && second->width_fraction - primary_fraction == 0) {
+				} else if (first->width_fraction - secondary_fraction == 0 && 
+								second->width_fraction - primary_fraction == 0) {
 					first->width_fraction = primary_fraction;
 					second->width_fraction = secondary_fraction;
 				}
