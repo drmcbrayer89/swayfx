@@ -24,6 +24,7 @@ static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 		// pr note #5 limit custom width_fraction to workspace-level
 		struct sway_container *first = children->items[0];
 		struct sway_container *second = children->items[1];
+		struct sway_container *third = children->items[2];
 		if (first->pending.parent == NULL) {
 			// pr note #4 custom width_fraction windows should be resizable
 			switch(children->length) {
@@ -38,8 +39,10 @@ static void apply_horiz_layout(list_t *children, struct wlr_box *parent) {
 				}
 				break;
 			case 3:
-				first->width_fraction = 0.33;
-				second->width_fraction = 0.33;
+				if(third->width_fraction <= 0) {
+					first->width_fraction = 0.33;
+					second->width_fraction = 0.33;
+				}
 				break;
 			default:
 				break;
